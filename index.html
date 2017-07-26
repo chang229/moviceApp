@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>电影展示</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/wap.css">
+</head>
+<body ng-app="moveApp" ng-controller="moveCtrl">
+    <!-- 顶部导航栏开始 -->
+    <div class="top">
+        <div class="header">
+            <div class="search">
+                <input class="my-input" ng-model="query" type="text" placeholder="电影搜索">
+                <button><a href="#/search?q={{query}}">搜索</a></button>
+            </div>
+            <a href="#/home_page"><img src="assets/img/logo.jpg" alt=""></a>
+        </div>
+        <nav class="nav">
+            <ul>
+                <!--li中添加 active 类样式，显示焦点状态。-->
+                <li ng-class="{active:prom.promurl==='/home_page'}"><a href="#/home_page">首页</a></li>
+                <li ng-class="{active:prom.promurl==='/in_theaters'}"><a href="#/in_theaters">正在热映</a></li>
+                <li ng-class="{active:prom.promurl==='/coming_soon'}"><a href="#/coming_soon">即将上映</a></li>
+                <li ng-class="{active:prom.promurl==='/top250'}"><a href="#/top250">Top250</a></li>
+            </ul>
+        </nav>
+    </div>
+    <!-- 顶部导航栏结束 -->
+    <div class="container">
+        <div ng-view></div>
+        <!--其他-->
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>版权所有&copy; angular提供技术支持 chang229(允许侵权)</p>
+        </div>
+    </footer>
+    <script src="./assets/js/prefixfree.min.js"></script>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-route/angular-route.js"></script>
+    <script src="./service/jsonp.js"></script>
+    <script src="./app.js"></script>
+    <script src="./home/home.js"></script>
+    <script src="./detail/detail.js"></script>
+    <script src="./move_list/move_list.js"></script>
+</body>
+
+</html>

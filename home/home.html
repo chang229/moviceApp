@@ -1,0 +1,56 @@
+<!-- 首页开始 -->
+<div class="list">
+	<!-- 头图 -->
+	<div class="banner">
+		<div><a href="#/details/26363254"><img src="./assets/img/wolf.jpg" alt=""></a></div>
+	</div>
+	<!-- 热门电影 -->
+	<ul class="page_index">
+		<li>热门电影<a href="#/in_theaters">更多>></a></li>
+	</ul>
+	<ul>
+		<li ng-repeat="item in theaters">
+			<a href="#/details/{{item.id}}">
+				<img ng-src="{{item.images.large}}"alt="">
+			</a>
+			<div class="meta">
+				<h4><span>{{item.title}}</span> <em>{{item.rating.average}}分</em></h4>
+				<div class="otherinfo">类型:<span>{{item.genres.join("、")}}</span></div>
+			</div>
+		</li>
+	</ul>
+	<!-- 最新电影 -->
+	<ul class="page_index">
+		<li>最新电影<a href="#/coming_soon">更多>></a></li>
+	</ul>
+	<ul>
+		<li ng-repeat="item in coming">
+			<a href="#/details/{{item.id}}">
+				<img ng-src="{{item.images.large}}"alt="">
+			</a>
+			<div class="meta">
+				<h4><span>{{item.title}}</span> <em>{{item.rating.average}}分</em></h4>
+				<div class="otherinfo">类型:<span>{{item.genres.join("、")}}</span></div>
+			</div>
+		</li>
+	</ul>
+</div>
+<!-- 首页结束 -->
+<!-- css loading -->
+<div class="windows8" ng-show="loading">
+	<div class="wBall" id="wBall_1">
+	    <div class="wInnerBall"></div>
+	</div>
+	<div class="wBall" id="wBall_2">
+	    <div class="wInnerBall"></div>
+	</div>
+	<div class="wBall" id="wBall_3">
+	    <div class="wInnerBall"></div>
+	</div>
+	<div class="wBall" id="wBall_4">
+	    <div class="wInnerBall"></div>
+	</div>
+	<div class="wBall" id="wBall_5">
+	    <div class="wInnerBall"></div>
+	</div>
+</div>

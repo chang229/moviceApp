@@ -1,0 +1,25 @@
+{
+  "name": "moveapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "angular": "^1.5.3",
+    "angular-route": "^1.5.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chang229/moviceApp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/chang229/moviceApp/issues"
+  },
+  "homepage": "https://github.com/chang229/moviceApp#readme",
+  "description": ""
+}
